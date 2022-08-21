@@ -1,0 +1,108 @@
+@import "vars";
+
+body {
+  font-family: "Open Sans";
+}
+
+.logo {
+  width: 158px;
+
+  outline: none;
+  transition: border 0.2s linear, opacity 0.2s linear;
+
+  &:focus {
+    border: 3px solid $blue;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+    border: none;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  width: 1170px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 130%;
+}
+
+.subtitle {
+  font-weight: 600;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+}
+
+.btn {
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 130%;
+
+  padding: 12px 24px;
+
+  background-color: $blue;
+  box-sizing: border-box;
+
+  transition: all 0.2s linear;
+  outline: none;
+  &:focus {
+    box-shadow: 0px 0px 0px 3px rgba(35, 82, 222, 0.5);
+  }
+
+  &:hover {
+    color: $blue;
+    background-color: #fff;
+    border: 1px solid $blue;
+  }
+
+  &:active {
+    box-shadow: inset 0px 7px 4px rgba(0, 0, 0, 0.25);
+    background-color: $blue;
+    color: #fff;
+  }
+}
+
+@include mobile {
+  .body_locked {
+    overflow: hidden;
+  }
+
+  .container {
+    max-width: 345px;
+  }
+
+  .logo {
+    width: 110px;
+    z-index: 4;
+
+    &__img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+}

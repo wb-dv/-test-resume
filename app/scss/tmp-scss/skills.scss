@@ -1,0 +1,110 @@
+.skills {
+  padding: 140px 0;
+  background-color: $section-bg;
+  z-index: -2;
+
+  &__title {
+    margin-bottom: 60px;
+    z-index: 2;
+    @include title_shadow($title-shadow_2);
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__scales {
+    display: flex;
+    flex-direction: column;
+    gap: 86px;
+  }
+
+  &__scale-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__scale {
+    width: 600px;
+    height: 32px;
+
+    background-color: $border-color;
+
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 100%;
+      background-color: $blue;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+
+    &_html {
+      &::after {
+        width: 85%;
+      }
+    }
+
+    &_css {
+      &::after {
+        width: 80%;
+      }
+    }
+
+    &_js {
+      &::after {
+        width: 61%;
+      }
+    }
+  }
+
+  &__label {
+    width: 64px;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: $black;
+    text-align: left;
+  }
+}
+
+@include mobile {
+  .skills {
+    padding: 50px 0;
+
+    &__portrait-img {
+      width: 300px;
+    }
+
+    &__content {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    &__scale-container {
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    &__scales {
+      gap: 24px;
+    }
+
+    &__scale {
+      width: 300px;
+      height: 32px;
+    }
+
+    &__label {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.header {
+  width: 100%;
+  position: absolute;
+  color: #fff;
+  z-index: 2;
+  transition: all 0.2s linear;
+
+  &_on-scroll {
+    position: fixed;
+    background-color: $nav-bg;
+    z-index: 5;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 53px;
+    margin: 0 auto;
+    width: 1170px;
+
+    &_on-scroll {
+      height: 80px;
+      padding: 0;
+      align-items: center;
+    }
+  }
+}
+
+@include mobile {
+  .header {
+    padding: 0 15px;
+    &__inner {
+      padding-top: 11px;
+      margin: 0;
+      width: 100%;
+
+      &_on-scroll {
+        padding: 0;
+        align-items: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.about-me {
+  padding: 140px 0;
+
+  &__title {
+    margin-bottom: 59px;
+
+    @include title_shadow($title-shadow_1);
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include mobile {
+  .about-me {
+    padding: 50px 0;
+  }
+}

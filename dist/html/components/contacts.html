@@ -1,0 +1,82 @@
+<section class="contacts">
+  <div class="container">
+    <h1 class="title contacts__title">Контакты</h1>
+    <div class="contacts__container">
+      <adress class="contacts__infornation"
+        ><p class="contacts__text">
+          Связаться со мной можно, воспользовавшись контактной формой, или
+          напрямую по номеру телефона, email, в соцсетях:
+        </p>
+        <a href="tel:+380501111111" class="contacts__link contacts__link_tel"
+          >+38 (050) 111 11 11</a
+        ><a
+          href="mailto:frontend-monster@email.com"
+          class="contacts__link contacts__link_email"
+          >frontend-monster@email.com</a
+        >
+        <div class="contacts__social-links">
+          <a href="#" class="contacts__link contacts__link_social"
+            ><img
+              src="./images/contacts/__social-link_inst.svg"
+              alt="Instagram"
+              class="contacts__social-img" /></a
+          ><a href="#" class="contacts__link contacts__link_social"
+            ><img
+              src="./images/contacts/__social-link_fb.svg"
+              alt="Faceboock"
+              class="contacts__social-img" /></a
+          ><a href="#" class="contacts__link contacts__link_social"
+            ><img
+              src="./images/contacts/__social-link_tg.svg"
+              alt="Telegram"
+              class="contacts__social-img"
+          /></a></div
+      ></adress>
+      <div class="contacts__form">
+        <form class="contacts__form-container" action="#">
+          <div class="contacts__form-fields">
+            <div class="contacts__form_name">
+              <label class="contacts__form-item_label" for="name"
+                >Ваше имя</label
+              >
+              <input
+                class="contacts__form-item contacts__form-item_name"
+                type="text"
+                name="name"
+                placeholder="Иван"
+              />
+            </div>
+            <div class="contacts__form_tel">
+              <label class="contacts__form-item_label" for="tel-number"
+                >Номер телефона</label
+              >
+              <input
+                class="contacts__form-item contacts__form-item_tel"
+                type="tel"
+                name="tel-number"
+                placeholder="+380501111111"
+              />
+            </div>
+            <div class="contacts__form_message">
+              <label class="contacts__form-item_label" for="message"
+                >Ваше сообщение</label
+              >
+              <textarea
+                class="contacts__form-item contacts__form-item_message"
+                name="message"
+                cols="30"
+                rows="10"
+                placeholder="Текст вашего сообщения"
+              ></textarea>
+            </div>
+          </div>
+          <input
+            class="btn contacts__form_submit-btn"
+            type="submit"
+            value="Отправить"
+          />
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

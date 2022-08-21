@@ -1,0 +1,189 @@
+.contacts {
+  padding-bottom: 140px;
+
+  &__title {
+    margin-bottom: 60px;
+    @include title_shadow;
+  }
+
+  &__container {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  }
+
+  &__infornation {
+    width: 530px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 160%;
+
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 130%;
+    color: $blue;
+    outline: none;
+
+    &_tel {
+      margin-bottom: 15px;
+    }
+
+    &_email {
+      display: block;
+      margin-bottom: 21px;
+    }
+
+    transition: all 0.2s linear;
+    &:focus {
+      box-shadow: 0px 0px 0px 2px rgba(35, 82, 222, 0.5);
+      border-radius: 3px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:active {
+      opacity: 0.7;
+      text-decoration: none;
+      box-shadow: none;
+    }
+
+    &_social {
+      &:hover {
+        opacity: 0.7;
+      }
+
+      &:active {
+        box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.15);
+        border-radius: 6px;
+      }
+    }
+  }
+
+  &__social-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__form-fields {
+    width: 540px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__form-item {
+    outline: none;
+    border: none;
+    background-color: $section-bg;
+
+    padding: 13px 15px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 130%;
+      color: $placeholder;
+    }
+
+    &_label {
+      display: block;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 130%;
+      margin-bottom: 10px;
+    }
+
+    &_name {
+      width: 100%;
+    }
+
+    &_tel {
+      width: 100%;
+    }
+    &_message {
+      width: 100%;
+      resize: none;
+    }
+
+    transition: all 0.2s linear;
+    &:focus {
+      box-shadow: 0px 0px 0px 3px rgba(35, 82, 222, 0.5);
+    }
+    transition: all 0.2s linear;
+    &:hover {
+      &::placeholder {
+        color: #000;
+      }
+    }
+  }
+
+  &__form {
+    &_name {
+      flex-grow: 1;
+    }
+
+    &_tel {
+      flex-grow: 1;
+    }
+
+    &_message {
+      flex-grow: 2;
+    }
+  }
+}
+
+@include mobile {
+  .contacts {
+    padding-bottom: 50px;
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__container {
+      flex-direction: column;
+      justify-content: start;
+      gap: 32px;
+    }
+
+    &__infornation {
+      width: 100%;
+    }
+
+    &__link {
+      &_email {
+        margin-bottom: 31px;
+      }
+    }
+    &__form-fields {
+      width: 100%;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    &__form-container {
+      width: 100%;
+    }
+
+    &__form {
+      width: 100%;
+      &_message {
+        flex-grow: 1;
+      }
+    }
+  }
+}
