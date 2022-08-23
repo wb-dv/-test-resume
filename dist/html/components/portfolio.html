@@ -1,53 +1,98 @@
 <section class="portfolio" id="portfolio">
   <div class="container portfolio__inner">
-    <h1 class="title portfolio__title">Мои работы</h1>
-    <div class="subtitle portfolio__select">
-      <button
-        type="button"
-        class="filter portfolio__btn-filter portfolio__all-works filter_active"
-        data-filter="all"
-      >
-        Все работы</button
-      ><button
-        type="button"
-        class="filter portfolio__btn-filter portfolio__landing-page"
-        data-filter=".landing-page"
-      >
-        Лендинги</button
-      ><button
-        type="button"
-        class="filter portfolio__btn-filter portfolio__corporate"
-        data-filter=".corporate"
-      >
-        Корпоративные</button
-      ><button
-        type="button"
-        class="filter portfolio__btn-filter portfolio__e-commerce"
-        data-filter=".e-commerce"
-      >
-        E-commerce
-      </button>
-    </div>
-    <div class="portfolio__images">
-      <div class="mix landing-page">
-        <img src="./images/portfolio/1.png" alt="item" class="porfolio__img" />
-      </div>
-      <div class="mix corporate">
-        <img src="./images/portfolio/2.png" alt="item" class="porfolio__img" />
-      </div>
-      <div class="mix landing-page">
-        <img src="./images/portfolio/3.png" alt="item" class="porfolio__img" />
-      </div>
-      <div class="mix corporate">
-        <img src="./images/portfolio/4.png" alt="item" class="porfolio__img" />
-      </div>
-      <div class="mix corporate">
-        <img src="./images/portfolio/5.png" alt="item" class="porfolio__img" />
-      </div>
-      <div class="mix e-commerce">
-        <img src="./images/portfolio/6.png" alt="item" class="porfolio__img" />
-      </div>
-    </div>
-    <button class="btn portfolio__download-btn">Загрузить еще</button>
+    <h1 class="title title_margin-off">Мои работы</h1>
+    <ul class="subtitle selector">
+      <li class="selector__item">
+        <button
+          class="filter filter__btn filter__btn_all _active"
+          type="button"
+          data-filter="all"
+        >
+          Все работы
+        </button>
+      </li>
+
+      <li class="selector__item">
+        <button
+          class="filter filter__btn filter__btn_landings"
+          type="button"
+          data-filter=".landing-page"
+        >
+          Лендинги
+        </button>
+      </li>
+
+      <li class="selector__item">
+        <button
+          class="filter filter__btn filter__btn_corporate"
+          type="button"
+          data-filter=".corporate"
+        >
+          Корпоративные
+        </button>
+      </li>
+
+      <li class="selector__item">
+        <button
+          class="filter filter__btn filter__btn_e-commerce"
+          type="button"
+          data-filter=".e-commerce"
+        >
+          E-commerce
+        </button>
+      </li>
+    </ul>
+    <ul class="portfolio__images">
+      <li class="mix landing-page">
+        <img
+          class="porfolio__img"
+          src="./images/portfolio/1.png"
+          alt="Работа №1"
+        />
+      </li>
+
+      <li class="mix corporate">
+        <img
+          class="porfolio__img"
+          src="./images/portfolio/2.png"
+          alt="Работа №2"
+        />
+      </li>
+
+      <li class="mix landing-page">
+        <img
+          class="porfolio__img"
+          src="./images/portfolio/3.png"
+          alt="Работа №3"
+        />
+      </li>
+
+      <li class="mix corporate">
+        <img
+          class="porfolio__img"
+          src="./images/portfolio/4.png"
+          alt="Работа №4"
+        />
+      </li>
+
+      <li class="mix corporate">
+        <img
+          class="porfolio__img"
+          src="./images/portfolio/5.png"
+          alt="Работа №5"
+        />
+      </li>
+
+      <li class="mix e-commerce">
+        <img
+          class="porfolio__img"
+          src="./images/portfolio/6.png"
+          alt="Работа №6"
+        />
+      </li>
+    </ul>
+    <button class="btn filter__btn_download-btn" type="button">
+      Загрузить еще
+    </button>
   </div>
 </section>

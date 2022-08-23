@@ -1,0 +1,58 @@
+.menu {
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 130%;
+
+  @include adpt($mob) {
+    position: fixed;
+    z-index: 3;
+    top: -100%;
+    left: 0;
+    padding-top: 81px;
+
+    display: block;
+    text-align: center;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: $nav-bg;
+
+    transition: top 0.5s linear;
+
+    &._open {
+      z-index: 3;
+      top: 0;
+      overflow: auto;
+    }
+
+    &__item {
+      z-index: 3;
+      padding: 11px 0;
+
+      transition: background-color 0.2s linear;
+
+      &:active {
+        background-color: rgba(35, 82, 222, 0.7);
+        text-decoration: none;
+        outline: none;
+      }
+    }
+  }
+
+  &__link {
+    z-index: 3;
+    @include states;
+
+    @include adpt($mob) {
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

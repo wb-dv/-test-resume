@@ -2,13 +2,13 @@
 
 $(document).ready(function () {
   $(".burger").click(function () {
-    $(this).toggleClass("burger_open");
-    $(".nav").toggleClass("nav_open");
+    $(this).toggleClass("_open");
+    $(".menu").toggleClass("_open");
     $("body").toggleClass("body_locked");
   });
-  $(".nav__link, .logo").click(function () {
-    $(".burger").removeClass("burger_open");
-    $(".nav").removeClass("nav_open");
+  $(".menu__link, .logo").click(function () {
+    $(".burger").removeClass("_open");
+    $(".menu").removeClass("_open");
     $("body").removeClass("body_locked");
   });
 });
@@ -17,18 +17,18 @@ $(document).ready(function () {
 
 $(window).on("scroll", function () {
   if ($(window).scrollTop() > 100) {
-    $(".header").addClass("header_on-scroll");
-    $(".header__inner").addClass("header__inner_on-scroll");
+    $(".nav").addClass("nav_on-scroll");
+    $(".nav__inner").addClass("nav__inner_on-scroll");
   } else {
-    $(".header").removeClass("header_on-scroll");
-    $(".header__inner").removeClass("header__inner_on-scroll");
+    $(".nav").removeClass("nav_on-scroll");
+    $(".nav__inner").removeClass("nav__inner_on-scroll");
   }
 });
 
 //Плавный скролл по якорям ->
 
 $(document).ready(function () {
-  $(".nav__link, .logo, .hero__link-to-portfolio").click(function () {
+  $(".menu__link, .logo, .header__portfolio-link").click(function () {
     elementClick = $(this).attr("href");
     destination = $(elementClick).offset().top - 80;
     jQuery("html:not(:animated),body:not(:animated)").animate(
@@ -44,29 +44,29 @@ let mixer = mixitup(".portfolio__images");
 //Активное состояние при выборе фильтра ->
 
 $(document).ready(function () {
-  $(".portfolio__all-works").click(function () {
-    $(this).addClass("filter_active");
+  $(".filter__btn_all").click(function () {
+    $(this).addClass("_active");
     $(
-      ".portfolio__landing-page, .portfolio__corporate, .portfolio__e-commerce"
-    ).removeClass("filter_active");
+      ".filter__btn_landings, .filter__btn_corporate, .filter__btn_e-commerce"
+    ).removeClass("_active");
   });
-  $(".portfolio__landing-page").click(function () {
-    $(this).addClass("filter_active");
+  $(".filter__btn_landings").click(function () {
+    $(this).addClass("_active");
     $(
-      ".portfolio__all-works, .portfolio__corporate, .portfolio__e-commerce"
-    ).removeClass("filter_active");
+      ".filter__btn_all, .filter__btn_corporate, .filter__btn_e-commerce"
+    ).removeClass("_active");
   });
-  $(".portfolio__corporate").click(function () {
-    $(this).addClass("filter_active");
+  $(".filter__btn_corporate").click(function () {
+    $(this).addClass("_active");
     $(
-      ".portfolio__all-works, .portfolio__landing-page, .portfolio__e-commerce"
-    ).removeClass("filter_active");
+      ".filter__btn_all, .filter__btn_landings, .filter__btn_e-commerce"
+    ).removeClass("_active");
   });
-  $(".portfolio__e-commerce").click(function () {
-    $(this).addClass("filter_active");
+  $(".filter__btn_e-commerce").click(function () {
+    $(this).addClass("_active");
     $(
-      ".portfolio__all-works, .portfolio__landing-page, .portfolio__corporate"
-    ).removeClass("filter_active");
+      ".filter__btn_all, .filter__btn_landings, .filter__btn_corporate"
+    ).removeClass("_active");
   });
 });
 
@@ -120,44 +120,20 @@ $(function () {
   });
 });
 
-// Эта часть была внутри функции выше и должна была открывать видео в мобильной версии в разделе отзывов
-
-// $(".reviews__video-container").addClass("reviews__video-container_open");
-// $(".reviews__video-closed-btn").addClass(
-//   "reviews__video-closed-btn_open"
-// );
-// });
-
-// $(".reviews__video-closed-btn").click(function () {
-// $(".reviews__video-container").removeClass(
-//   "reviews__video-container_open"
-// );
-// $(this).removeClass("reviews__video-closed-btn_open");
-
-//Реазлизация состояний focused hover active для видео из блока отзывов
+//Реазлизация состояний focus и hover для видео из блока отзывов
 
 $(function () {
   $(".reviews__play-btn").on("focus", function () {
-    $(".reviews__video-layout").addClass("reviews__video-layout_focused");
+    $(".reviews__video-layout").addClass("_focused");
   });
 
   $(".reviews__play-btn").on("focusout", function () {
-    $(".reviews__video-layout").removeClass("reviews__video-layout_focused");
+    $(".reviews__video-layout").removeClass("_focused");
   });
 });
 
 $(function () {
   $(".reviews__play-btn").hover(function () {
-    $(".reviews__video-layout").toggleClass("reviews__video-layout_hover");
+    $(".reviews__video-layout").toggleClass("_hover");
   });
 });
-
-// $(function () {
-//   $(".reviews__play-btn").on("active", function () {
-//     $(".reviews__video-layout").addClass("reviews__video-layout_active");
-//   });
-
-//   $(".reviews__play-btn").on("activeout", function () {
-//     $(".reviews__video-layout").removeClass("reviews__video-layout_active");
-//   });
-// });

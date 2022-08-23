@@ -51,8 +51,7 @@ function styles() {
 function scripts() {
   return src([
     "node_modules/jquery/dist/jquery.js",
-    // 'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
-    "app/js/mixitup.min.js",
+    "node_modules/mixitup/dist/mixitup.min.js",
     "app/js/main.js",
   ])
     .pipe(concat("main.min.js"))

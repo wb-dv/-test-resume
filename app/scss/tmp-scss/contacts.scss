@@ -1,46 +1,49 @@
 .contacts {
   padding-bottom: 140px;
 
-  &__title {
-    margin-bottom: 60px;
-    @include title_shadow;
+  @include adpt($mob) {
+    padding-bottom: 50px;
+    &__form-container {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    margin-bottom: 30px;
   }
 
   &__container {
     display: flex;
     align-items: start;
     justify-content: space-between;
+
+    @include adpt($mob) {
+      flex-direction: column;
+      justify-content: start;
+      gap: 32px;
+    }
   }
 
   &__infornation {
-    width: 530px;
-  }
+    max-width: 530px;
+    width: 100%;
 
-  &__text {
-    font-size: 16px;
-    line-height: 160%;
-
-    margin-bottom: 30px;
+    @include adpt($mob) {
+      max-width: 100%;
+    }
   }
 
   &__link {
     font-size: 16px;
     line-height: 130%;
     color: $blue;
-    outline: none;
+    border-radius: 3px;
 
-    &_tel {
-      margin-bottom: 15px;
-    }
+    transition: outline 0.2s linear, text-decoration 0.2s linear,
+      opacity 0.2s linear;
 
-    &_email {
-      display: block;
-      margin-bottom: 21px;
-    }
-
-    transition: all 0.2s linear;
     &:focus {
-      box-shadow: 0px 0px 0px 2px rgba(35, 82, 222, 0.5);
+      outline: 2px solid rgba(35, 82, 222, 0.5);
       border-radius: 3px;
     }
 
@@ -51,45 +54,80 @@
     &:active {
       opacity: 0.7;
       text-decoration: none;
-      box-shadow: none;
+      outline: none;
+    }
+  }
+}
+
+.links-list {
+  &__item {
+    margin-bottom: 15px;
+    &:last-child {
+      margin-bottom: 21px;
     }
 
-    &_social {
-      &:hover {
-        opacity: 0.7;
-      }
-
-      &:active {
-        box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.15);
-        border-radius: 6px;
+    @include adpt($mob) {
+      &:last-child {
+        margin-bottom: 31px;
       }
     }
   }
+}
 
-  &__social-links {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+.social {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  &__link {
+    border-radius: 3px;
+
+    transition: opacity 0.2s linear, box-shadow 0.2s linear;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.15);
+      border-radius: 13px;
+      outline: none;
+      opacity: 1;
+    }
   }
+}
 
-  &__form-fields {
-    width: 540px;
+.form {
+  max-width: 540px;
+  width: 100%;
+
+  &__row {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
     gap: 30px;
     margin-bottom: 30px;
+
+    @include adpt($mob) {
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
   }
 
-  &__form-item {
-    outline: none;
-    border: none;
-    background-color: $section-bg;
+  &__row-item {
+    width: 100%;
+  }
 
+  &__field {
+    width: 100%;
     padding: 13px 15px;
 
     font-weight: 400;
     font-size: 14px;
     line-height: 130%;
+
+    background-color: $section-bg;
+    resize: none;
 
     &::placeholder {
       font-weight: 400;
@@ -98,31 +136,11 @@
       color: $placeholder;
     }
 
-    &_label {
-      display: block;
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 130%;
-      margin-bottom: 10px;
-    }
-
-    &_name {
-      width: 100%;
-    }
-
-    &_tel {
-      width: 100%;
-    }
-    &_message {
-      width: 100%;
-      resize: none;
-    }
-
-    transition: all 0.2s linear;
+    transition: outline 0.2s linear;
     &:focus {
-      box-shadow: 0px 0px 0px 3px rgba(35, 82, 222, 0.5);
+      outline: 3px solid rgba(35, 82, 222, 0.5);
     }
-    transition: all 0.2s linear;
+    transition: color 0.2s linear;
     &:hover {
       &::placeholder {
         color: #000;
@@ -130,60 +148,22 @@
     }
   }
 
-  &__form {
-    &_name {
-      flex-grow: 1;
-    }
+  &__textarea {
+    height: 115px;
+    margin-bottom: 30px;
 
-    &_tel {
-      flex-grow: 1;
-    }
-
-    &_message {
-      flex-grow: 2;
-    }
-  }
-}
-
-@include mobile {
-  .contacts {
-    padding-bottom: 50px;
-
-    &__title {
-      margin-bottom: 30px;
-    }
-
-    &__container {
-      flex-direction: column;
-      justify-content: start;
-      gap: 32px;
-    }
-
-    &__infornation {
-      width: 100%;
-    }
-
-    &__link {
-      &_email {
-        margin-bottom: 31px;
-      }
-    }
-    &__form-fields {
-      width: 100%;
-      flex-direction: column;
-      gap: 15px;
+    @include adpt($mob) {
       margin-bottom: 15px;
     }
+  }
 
-    &__form-container {
-      width: 100%;
-    }
+  &__label {
+    margin-bottom: 10px;
 
-    &__form {
-      width: 100%;
-      &_message {
-        flex-grow: 1;
-      }
-    }
+    display: block;
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
   }
 }

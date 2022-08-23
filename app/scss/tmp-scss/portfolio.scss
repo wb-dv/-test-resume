@@ -1,28 +1,54 @@
 .portfolio {
   padding-bottom: 140px;
 
+  @include adpt($mob) {
+    padding: 9px 0 50px 0;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 60px;
+
+    @include adpt($mob) {
+      gap: 30px;
+    }
   }
 
   &__title {
-    @include title_shadow;
+    margin-bottom: 0;
   }
 
-  &__select {
-    display: flex;
-    gap: 35px;
-  }
+  &__images {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
 
-  &__btn-filter {
-    transition: all 0.2s linear;
-    outline: none;
+    @include adpt($mob) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+  }
+}
+
+.filter {
+  &__btn {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 160%;
+
+    @include adpt($mob) {
+      font-size: 18px;
+    }
+
+    border-radius: 3px;
+    transition: outline 0.2s linear, color 0.2s linear,
+      text-decoration 0.2s linear;
+
     &:focus {
-      box-shadow: 0px 0px 0px 2px rgba(35, 82, 222, 0.5);
-      border-radius: 3px;
+      outline: 2px solid rgba(35, 82, 222, 0.5);
     }
 
     &:hover {
@@ -33,54 +59,25 @@
     &:active {
       color: $blue;
       text-decoration: none;
-      box-shadow: none;
+      outline: none;
     }
-  }
-
-  &__images {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 45px;
-  }
-
-  &__all-works {
-    transition: all 0.2s linear;
-  }
-
-  &__landing-page {
-    transition: all 0.2s linear;
-  }
-
-  &__corporate {
-    transition: all 0.2s linear;
-  }
-
-  &__e-commerce {
-    transition: all 0.2s linear;
   }
 }
 
-.filter_active {
+.selector {
+  display: flex;
+  gap: 35px;
+
+  &__item {
+    text-align: center;
+  }
+
+  @include adpt($mob) {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+._active {
   color: $blue;
-}
-
-@include mobile {
-  .portfolio {
-    padding: 9px 0 50px 0;
-
-    &__inner {
-      gap: 30px;
-    }
-
-    &__select {
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    &__images {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-    }
-  }
 }

@@ -1,53 +1,65 @@
 .services {
   padding: 140px 0;
 
-  &__title {
-    margin-bottom: 60px;
-    @include title-shadow;
+  @include adpt($mob) {
+    padding: 50px 0;
   }
 
   &__cards {
     display: flex;
     gap: 90px;
+
+    @include adpt($mob) {
+      flex-direction: column;
+      gap: 30px;
+    }
   }
 
   &__card {
     width: 330px;
+
+    @include adpt($mob) {
+      width: 100%;
+    }
   }
 
   &__img {
+    width: 60px;
+    height: 60px;
+
     margin-bottom: 30px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &_code {
+      background-image: url("../images/services/code.svg");
+    }
+
+    &_dev {
+      background-image: url("../images/services/dev.svg");
+    }
+
+    &_chat {
+      background-image: url("../images/services/chat.svg");
+    }
+
+    @include adpt($mob) {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 10px;
+    }
   }
 
   &__subtitle {
     margin-bottom: 25px;
-  }
-}
 
-@include mobile {
-  .services {
-    padding: 50px 0;
+    font-weight: 600;
+    font-size: 28px;
 
-    &__title {
-      margin-bottom: 30px;
-    }
-
-    &__cards {
-      flex-direction: column;
-      gap: 30px;
-    }
-
-    &__card {
-      width: 100%;
-    }
-
-    &__img {
-      width: 40px;
-      margin-bottom: 10px;
-    }
-
-    &__subtitle {
+    @include adpt($mob) {
       margin-bottom: 15px;
+      font-size: 20px;
     }
   }
 }

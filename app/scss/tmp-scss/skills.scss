@@ -1,65 +1,70 @@
 .skills {
-  padding: 140px 0;
-  background-color: $section-bg;
   z-index: -2;
+  padding: 140px 0;
 
-  &__title {
-    margin-bottom: 60px;
-    z-index: 2;
-    @include title_shadow($title-shadow_2);
+  background-color: $section-bg;
+
+  @include adpt($mob) {
+    padding: 50px 0;
+
+    &__portrait-img {
+      width: 300px;
+    }
   }
 
   &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include adpt($mob) {
+      flex-direction: column;
+      gap: 30px;
+    }
   }
 
-  &__scales {
+  &__list {
     display: flex;
     flex-direction: column;
     gap: 86px;
+
+    @include adpt($mob) {
+      gap: 24px;
+    }
   }
 
-  &__scale-container {
+  &__item {
     display: flex;
     align-items: center;
+
+    @include adpt($mob) {
+      flex-direction: column;
+      gap: 5px;
+    }
   }
 
   &__scale {
+    position: relative;
+
     width: 600px;
     height: 32px;
 
     background-color: $border-color;
 
-    position: relative;
+    @include adpt($mob) {
+      width: 300px;
+      height: 32px;
+    }
 
-    &::after {
+    span {
       position: absolute;
-      content: "";
-      height: 100%;
-      background-color: $blue;
       top: 0;
       left: 0;
       z-index: 2;
-    }
 
-    &_html {
-      &::after {
-        width: 85%;
-      }
-    }
+      height: 100%;
 
-    &_css {
-      &::after {
-        width: 80%;
-      }
-    }
-
-    &_js {
-      &::after {
-        width: 61%;
-      }
+      background-color: $blue;
     }
   }
 
@@ -72,37 +77,8 @@
     text-transform: uppercase;
     color: $black;
     text-align: left;
-  }
-}
 
-@include mobile {
-  .skills {
-    padding: 50px 0;
-
-    &__portrait-img {
-      width: 300px;
-    }
-
-    &__content {
-      flex-direction: column;
-      gap: 30px;
-    }
-
-    &__scale-container {
-      flex-direction: column;
-      gap: 5px;
-    }
-
-    &__scales {
-      gap: 24px;
-    }
-
-    &__scale {
-      width: 300px;
-      height: 32px;
-    }
-
-    &__label {
+    @include adpt($mob) {
       width: 100%;
       text-align: center;
     }

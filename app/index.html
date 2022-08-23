@@ -16,72 +16,86 @@
 
   <body></body>
 </html>
+ <header class="header" id="header">
+  <nav class="nav">
+  <div class="container nav__inner">
+    <a class="logo" href="#header">
+      <img class="logo__img" src="./images/logo.svg" alt="Логотип" />
+    </a>
+
+    <button class="burger" type="button">
+  <span class="burger__item"></span>
+  <span class="sr-only">Открыть/Закрыть мобильное меню</span>
+</button>
+
+<ul class="menu">
+  <li class="menu__item">
+    <a href="#about" class="menu__link">Обо мне</a>
+  </li>
+
+  <li class="menu__item">
+    <a href="#skills" class="menu__link">Навыки</a>
+  </li>
+
+  <li class="menu__item">
+    <a href="#services" class="menu__link">Услуги</a>
+  </li>
+
+  <li class="menu__item">
+    <a href="#portfolio" class="menu__link">Портфолио</a>
+  </li>
+
+  <li class="menu__item">
+    <a href="#reviews" class="menu__link">Отзывы</a>
+  </li>
+
+  <li class="menu__item">
+    <a href="#contacts" class="menu__link">Контакты</a>
+  </li>
+</ul>
+
+  </div>
+</nav>
+
+  <div class="container header__inner">
+    <h1 class="header__text">
+      Привет, я Иван Иванов
+      <span class="header__text_bold">frontend-<br />разработчик</span>
+    </h1>
+
+    <div class="header__link">
+      <a href="#portfolio" class="header__portfolio-link">
+        смотреть работы
+        <svg
+          width="37"
+          height="23"
+          viewBox="0 0 37 23"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.5 22.0455C17.8368 22.0455 17.1738 21.7923 16.6682 21.287L0.759084 5.37767C-0.252947 4.36564 -0.252947 2.7248 0.759084 1.71318C1.77071 0.701562 3.41121 0.701562 4.42332 1.71318L18.5 15.7906L32.5767 1.71368C33.5887 0.702054 35.229 0.702054 36.2406 1.71368C37.2531 2.7253 37.2531 4.36613 36.2406 5.37816L20.3317 21.2875C19.8259 21.7929 19.1628 22.0455 18.5 22.0455Z"
+            fill="white"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+</header>
 
 
 <main class="main">
-  <header class="header">
-  <div class="header__inner">
-    <a class="logo logo__href" href=".hero"
-      ><img class="logo__img" src="./images/logo.svg" alt="Logo"
-    /></a>
-    <button class="burger">
-  <span class="burger__item"></span>
-</button>
-
-<nav class="nav">
-  <ul class="nav__list">
-    <li class="nav__item"><a href=".about-me" class="nav__link">Обо мне</a></li>
-    <li class="nav__item"><a href=".skills" class="nav__link">Навыки</a></li>
-    <li class="nav__item"><a href=".services" class="nav__link">Услуги</a></li>
-    <li class="nav__item">
-      <a href=".portfolio" class="nav__link">Портфолио</a>
-    </li>
-    <li class="nav__item">
-      <a href=".reviews" class="nav__link">Отзывы</a>
-    </li>
-    <li class="nav__item">
-      <a href=".contacts" class="nav__link">Контакты</a>
-    </li>
-  </ul>
-</nav>
-
-  </div>
-</header>
- <section class="hero">
-  <div class="container hero__inner">
-    <p class="text hero__text">Привет, я Иван Иванов</p>
-    <h1 class="title hero__title">frontend-<br />разработчик</h1>
-    <a
-      href=".portfolio"
-      class="hero__link-to-portfolio hero__link-to-portfolio_font"
-      >смотреть работы<svg
-        class="hero__arrow-img"
-        width="37"
-        height="23"
-        viewBox="0 0 37 23"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M18.5 22.0455C17.8368 22.0455 17.1738 21.7923 16.6682 21.287L0.759084 5.37767C-0.252947 4.36564 -0.252947 2.7248 0.759084 1.71318C1.77071 0.701562 3.41121 0.701562 4.42332 1.71318L18.5 15.7906L32.5767 1.71368C33.5887 0.702054 35.229 0.702054 36.2406 1.71368C37.2531 2.7253 37.2531 4.36613 36.2406 5.37816L20.3317 21.2875C19.8259 21.7929 19.1628 22.0455 18.5 22.0455Z"
-          fill="white"
-        />
-      </svg>
-    </a>
-  </div>
-</section>
-
-  <section id="about-me" class="about-me">
-  <div class="container">
-    <h2 class="title about-me__title">Обо мне</h2>
-    <p class="text about-me__text">
+  <section class="about" id="about">
+  <div class="container about__container">
+    <h2 class="title">Обо мне</h2>
+    <p>
       Приветствую всех на своём сайте! Меня зовут Иван, я из Киева. Занимаюсь
       фронтенд-разработкой более года. До разработки занимался нелюбимым делом,
       ходил на нелюбимую работу, не мог понять за что взяться, чтобы дело
       приносило удовольствие и деньги, пока не наткнулся на один интересный
       курс.
     </p>
-    <p class="text about-me__text">
+    <p>
       С тех пор прошел огонь, воду и медные трубы. Учёба давалась по-разному:
       где-то легче, где-то сложнее. Каждодневная работа над навыками и усердие,
       с которым я подходил к обучению, уже через несколько месяцев принесли
@@ -92,285 +106,322 @@
 </section>
  <section class="skills" id="skills">
   <div class="container">
-    <h2 class="title skills__title">Навыки</h2>
+    <h2 class="title">Навыки</h2>
     <div class="skills__content">
       <img
-        src="./images/skills__portrait.png"
-        alt="portrait"
         class="skills__portrait-img"
+        src="./images/skills__portrait.png"
+        alt="Мой портрет"
       />
-      <div class="skills__scales">
-        <div class="skills__scale-container">
+      <ul class="skills__list">
+        <li class="skills__item">
           <span class="skills__label">html</span>
-          <div class="skills__scale skills__scale_html"></div>
-        </div>
-        <div class="skills__scale-container">
+          <div class="skills__scale">
+            <span style="width: 85%"></span>
+          </div>
+        </li>
+
+        <li class="skills__item">
           <span class="skills__label">css</span>
-          <div class="skills__scale skills__scale_css"></div>
-        </div>
-        <div class="skills__scale-container">
+          <div class="skills__scale">
+            <span style="width: 80%"></span>
+          </div>
+        </li>
+
+        <li class="skills__item">
           <span class="skills__label">js</span>
-          <div class="skills__scale skills__scale_js"></div>
-        </div>
-      </div>
+          <div class="skills__scale">
+            <span style="width: 61%"></span>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
 
   <section class="services" id="services">
   <div class="container">
-    <h1 class="title services__title">Услуги</h1>
-    <div class="services__cards">
-      <div class="services__card">
-        <img
-          src="./images/services/code.svg"
-          alt="Layout"
-          class="services__img"
-        />
-        <h2 class="subtitle services__subtitle">Вёрстка проектов</h2>
-        <p class="text services__text">
+    <h1 class="title">Услуги</h1>
+    <ul class="services__cards">
+      <li class="services__card">
+        <div class="services__img services__img_code"></div>
+        <h2 class="services__subtitle">Вёрстка проектов</h2>
+        <div class="text">
           Сделаю качественную вёрстку вашего проекта по предоставленному макету
           или примеру
-        </p>
-      </div>
-      <div class="services__card">
-        <img src="./images/services/dev.svg" alt="CMS" class="services__img" />
-        <h2 class="subtitle services__subtitle">Посадка на CMS</h2>
-        <p class="text services__text">
-          Интегрирую ваш проект в одну из популярных CMS
-        </p>
-      </div>
-      <div class="services__card">
-        <img
-          src="./images/services/chat.svg"
-          alt="Support"
-          class="services__img"
-        />
-        <h2 class="subtitle services__subtitle">Поддержка сайта</h2>
-        <p class="text services__text">
+        </div>
+      </li>
+
+      <li class="services__card">
+        <div class="services__img services__img_dev"></div>
+        <h2 class="services__subtitle">Посадка на CMS</h2>
+        <div class="text">Интегрирую ваш проект в одну из популярных CMS</div>
+      </li>
+
+      <li class="services__card">
+        <div class="services__img services__img_chat"></div>
+        <h2 class="services__subtitle">Поддержка сайта</h2>
+        <div class="text">
           Гарантирую поддержку вашего сайта на протяжениии 30 дней после сдача
           проекта
-        </p>
-      </div>
-    </div>
+        </div>
+      </li>
+    </ul>
   </div>
 </section>
  <section class="portfolio" id="portfolio">
   <div class="container portfolio__inner">
-    <h1 class="title portfolio__title">Мои работы</h1>
-    <div class="subtitle portfolio__select">
-      <button
-        type="button"
-        class="filter portfolio__btn-filter portfolio__all-works filter_active"
-        data-filter="all"
-      >
-        Все работы</button
-      ><button
-        type="button"
-        class="filter portfolio__btn-filter portfolio__landing-page"
-        data-filter=".landing-page"
-      >
-        Лендинги</button
-      ><button
-        type="button"
-        class="filter portfolio__btn-filter portfolio__corporate"
-        data-filter=".corporate"
-      >
-        Корпоративные</button
-      ><button
-        type="button"
-        class="filter portfolio__btn-filter portfolio__e-commerce"
-        data-filter=".e-commerce"
-      >
-        E-commerce
-      </button>
-    </div>
-    <div class="portfolio__images">
-      <div class="mix landing-page">
-        <img src="./images/portfolio/1.png" alt="item" class="porfolio__img" />
-      </div>
-      <div class="mix corporate">
-        <img src="./images/portfolio/2.png" alt="item" class="porfolio__img" />
-      </div>
-      <div class="mix landing-page">
-        <img src="./images/portfolio/3.png" alt="item" class="porfolio__img" />
-      </div>
-      <div class="mix corporate">
-        <img src="./images/portfolio/4.png" alt="item" class="porfolio__img" />
-      </div>
-      <div class="mix corporate">
-        <img src="./images/portfolio/5.png" alt="item" class="porfolio__img" />
-      </div>
-      <div class="mix e-commerce">
-        <img src="./images/portfolio/6.png" alt="item" class="porfolio__img" />
-      </div>
-    </div>
-    <button class="btn portfolio__download-btn">Загрузить еще</button>
+    <h1 class="title title_margin-off">Мои работы</h1>
+    <ul class="subtitle selector">
+      <li class="selector__item">
+        <button
+          class="filter filter__btn filter__btn_all _active"
+          type="button"
+          data-filter="all"
+        >
+          Все работы
+        </button>
+      </li>
+
+      <li class="selector__item">
+        <button
+          class="filter filter__btn filter__btn_landings"
+          type="button"
+          data-filter=".landing-page"
+        >
+          Лендинги
+        </button>
+      </li>
+
+      <li class="selector__item">
+        <button
+          class="filter filter__btn filter__btn_corporate"
+          type="button"
+          data-filter=".corporate"
+        >
+          Корпоративные
+        </button>
+      </li>
+
+      <li class="selector__item">
+        <button
+          class="filter filter__btn filter__btn_e-commerce"
+          type="button"
+          data-filter=".e-commerce"
+        >
+          E-commerce
+        </button>
+      </li>
+    </ul>
+    <ul class="portfolio__images">
+      <li class="mix landing-page">
+        <img
+          class="porfolio__img"
+          src="./images/portfolio/1.png"
+          alt="Работа №1"
+        />
+      </li>
+
+      <li class="mix corporate">
+        <img
+          class="porfolio__img"
+          src="./images/portfolio/2.png"
+          alt="Работа №2"
+        />
+      </li>
+
+      <li class="mix landing-page">
+        <img
+          class="porfolio__img"
+          src="./images/portfolio/3.png"
+          alt="Работа №3"
+        />
+      </li>
+
+      <li class="mix corporate">
+        <img
+          class="porfolio__img"
+          src="./images/portfolio/4.png"
+          alt="Работа №4"
+        />
+      </li>
+
+      <li class="mix corporate">
+        <img
+          class="porfolio__img"
+          src="./images/portfolio/5.png"
+          alt="Работа №5"
+        />
+      </li>
+
+      <li class="mix e-commerce">
+        <img
+          class="porfolio__img"
+          src="./images/portfolio/6.png"
+          alt="Работа №6"
+        />
+      </li>
+    </ul>
+    <button class="btn filter__btn_download-btn" type="button">
+      Загрузить еще
+    </button>
   </div>
 </section>
 
-  <section class="reviews">
+  <section class="reviews" id="reviews">
   <div class="container reviews__container">
-    <h1 class="title reviews__title">Отзывы клиентов</h1>
+    <h1 class="title title_margin-off">Отзывы клиентов</h1>
     <div class="reviews__inner">
       <div class="reviews__content">
         <img
+          class="reviews__client-photo"
           src="./images/reviews/reviews__client-avatar.svg"
-          alt="Avatar"
-          class="reviews__client-avatar"
+          alt="Фото клиента"
         />
-        <h2 class="reviews__client-name">Марк Цукерберг</h2>
-        <p class="reviews__client-review">
-          Фантастика! Я всецело доволен работой этого специалиста. Быстро и
-          качественно. Рекомендую!
-        </p>
+        <figure>
+          <figcaption class="reviews__client-name">Марк Цукерберг</figcaption>
+
+          <blockquote class="reviews__client-review">
+            Фантастика! Я всецело доволен работой этого специалиста. Быстро и
+            качественно. Рекомендую!
+          </blockquote>
+        </figure>
       </div>
-      <!-- Кнопка закрытия видео в мобильной версии, настроить не успел
-      <button class="reviews__video-closed-btn">Закрыть</button> -->
       <div class="reviews__video-container">
         <video
-          src="#"
           class="reviews__video"
+          src="#"
           poster="./images/reviews/reviews__video-bg.png"
         ></video>
         <div class="reviews__video-blackout">
-          <button class="reviews__play-btn">
-            <svg
-              width="86"
-              height="100"
-              viewBox="0 0 86 100"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M0 0L85.7143 50L0 100V0Z" fill="white" />
-            </svg>
+          <!-- сделал кнопку play через button чтобы ловить на нём active и затемнять видео, через div не работает,
+          на video тоже active не ловится -->
+          <button class="reviews__play-btn" type="button">
+            <span class="sr-only">Включить видео</span>
           </button>
+          <!-- через псевдик не нашёл более короткого решения, оставляю div layout -->
           <div class="reviews__video-layout"></div>
         </div>
       </div>
     </div>
   </div>
 </section>
- <section class="stats">
-  <div class="container stats__items">
-    <div class="stats__item">
-      <img
-        src="./images/stats/stats__works.svg"
-        alt="Works"
-        class="stats__img_works"
-      />
+ <section class="stats" id="stats">
+  <ul class="container stats__list">
+    <li class="stats__item">
+      <div class="stats__img stats__img_works"></div>
       <h2 class="stats__title">Выполненных работ</h2>
-      <p class="stats__value">56</p>
-    </div>
-    <div class="stats__item">
-      <img
-        src="./images/stats/stats__clients.svg"
-        alt="Clients"
-        class="stats__img_clients"
-      />
+      <div class="stats__value">56</div>
+    </li>
+
+    <li class="stats__item">
+      <div class="stats__img stats__img_clients"></div>
       <h2 class="stats__title">Довольных клиентов</h2>
-      <p class="stats__value">23</p>
-    </div>
-    <div class="stats__item">
-      <img
-        src="./images/stats/stats__coffee.svg"
-        alt="Cup of coffee"
-        class="stats__img_coffee"
-      />
+      <div class="stats__value">23</div>
+    </li>
+
+    <li class="stats__item">
+      <div class="stats__img stats__img_coffee"></div>
       <h2 class="stats__title">Выпито чашек кофе</h2>
-      <p class="stats__value">477</p>
-    </div>
-    <div class="stats__item">
-      <img
-        src="./images/stats/stats__review.svg"
-        alt="Reviews"
-        class="stats__img_reviews"
-      />
+      <div class="stats__value">477</div>
+    </li>
+
+    <li class="stats__item">
+      <div class="stats__img stats__img_reviews"></div>
       <h2 class="stats__title">Всего отзывов</h2>
-      <p class="stats__value">48</p>
-    </div>
-  </div>
+      <div class="stats__value">48</div>
+    </li>
+  </ul>
 </section>
 
-  <section class="contacts">
+  <section class="contacts" id="contacts">
   <div class="container">
-    <h1 class="title contacts__title">Контакты</h1>
+    <h1 class="title">Контакты</h1>
     <div class="contacts__container">
-      <adress class="contacts__infornation"
-        ><p class="contacts__text">
+      <adress class="contacts__infornation">
+        <div class="text contacts__text">
           Связаться со мной можно, воспользовавшись контактной формой, или
           напрямую по номеру телефона, email, в соцсетях:
-        </p>
-        <a href="tel:+380501111111" class="contacts__link contacts__link_tel"
-          >+38 (050) 111 11 11</a
-        ><a
-          href="mailto:frontend-monster@email.com"
-          class="contacts__link contacts__link_email"
-          >frontend-monster@email.com</a
-        >
-        <div class="contacts__social-links">
-          <a href="#" class="contacts__link contacts__link_social"
-            ><img
-              src="./images/contacts/__social-link_inst.svg"
-              alt="Instagram"
-              class="contacts__social-img" /></a
-          ><a href="#" class="contacts__link contacts__link_social"
-            ><img
-              src="./images/contacts/__social-link_fb.svg"
-              alt="Faceboock"
-              class="contacts__social-img" /></a
-          ><a href="#" class="contacts__link contacts__link_social"
-            ><img
-              src="./images/contacts/__social-link_tg.svg"
-              alt="Telegram"
-              class="contacts__social-img"
-          /></a></div
-      ></adress>
-      <div class="contacts__form">
-        <form class="contacts__form-container" action="#">
-          <div class="contacts__form-fields">
-            <div class="contacts__form_name">
-              <label class="contacts__form-item_label" for="name"
-                >Ваше имя</label
-              >
-              <input
-                class="contacts__form-item contacts__form-item_name"
-                type="text"
-                name="name"
-                placeholder="Иван"
-              />
-            </div>
-            <div class="contacts__form_tel">
-              <label class="contacts__form-item_label" for="tel-number"
-                >Номер телефона</label
-              >
-              <input
-                class="contacts__form-item contacts__form-item_tel"
-                type="tel"
-                name="tel-number"
-                placeholder="+380501111111"
-              />
-            </div>
-            <div class="contacts__form_message">
-              <label class="contacts__form-item_label" for="message"
-                >Ваше сообщение</label
-              >
-              <textarea
-                class="contacts__form-item contacts__form-item_message"
-                name="message"
-                cols="30"
-                rows="10"
-                placeholder="Текст вашего сообщения"
-              ></textarea>
-            </div>
-          </div>
-          <input
-            class="btn contacts__form_submit-btn"
-            type="submit"
-            value="Отправить"
-          />
-        </form>
-      </div>
+        </div>
+
+        <ul class="links-list">
+          <li class="links-list__item">
+            <a class="contacts__link" href="tel:+380501111111"
+              >+38 (050) 111 11 11</a
+            >
+          </li>
+          <li class="links-list__item">
+            <a class="contacts__link" href="mailto:frontend-monster@email.com"
+              >frontend-monster@email.com</a
+            >
+          </li>
+        </ul>
+
+        <ul class="social">
+          <li>
+            <a class="contacts__link social__link" href="#"
+              ><img
+                src="./images/contacts/__social-link_inst.svg"
+                alt="Интсаграмм"
+            /></a>
+          </li>
+
+          <li>
+            <a class="contacts__link social__link" href="#"
+              ><img
+                src="./images/contacts/__social-link_fb.svg"
+                alt="Фэйсбук"
+            /></a>
+          </li>
+
+          <li>
+            <a class="contacts__link social__link" href="#"
+              ><img
+                src="./images/contacts/__social-link_tg.svg"
+                alt="Телеграмм"
+            /></a>
+          </li>
+        </ul>
+      </adress>
+
+      <form class="form" action="#">
+        <ul class="form__row">
+          <li class="form__row-item">
+            <label class="form__label" for="name">Ваше имя</label>
+            <input
+              class="form__field"
+              type="text"
+              name="name"
+              placeholder="Иван"
+            />  
+          </li>
+          
+          <li class="form__row-item">
+            <label class="form__label" for="tel-number">Номер телефона</label>
+            <input
+              class="  form__field"
+              type="tel"
+              name="tel-number"
+              placeholder="+380501111111"
+            />
+          </li>
+        </ul>
+
+        <label class="form__label" for="message">Ваше сообщение</label>
+        <textarea
+        class="form__field form__textarea"
+        name="message"
+        placeholder="Текст вашего сообщения"></textarea>
+        
+        <label class="sr-only" for="submit-bth">Отправить</label>
+        <input
+          class="btn"
+          type="submit"
+          value="Отправить"
+          name="submit-bth"
+        />
+        </div>
+      </form>
     </div>
   </div>
 </section>
@@ -378,9 +429,9 @@
 </main>
 
 <footer class="footer">
-  <a class="logo logo__href" href=".hero"
-    ><img class="logo__img" src="./images/logo.svg" alt="Logo"
-  /></a>
+  <a class="logo" href="#header">
+    <img class="logo__img" src="./images/logo.svg" alt="Логотип" />
+  </a>
 </footer>
 <script src="js/main.min.js"></script>
 </body>
